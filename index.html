@@ -3,518 +3,82 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CRM MIRED360SERVICIOS · WhatsApp API</title>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<title>Querido amigo, te esperamos</title>
+<meta name="description" content="Invitación especial al culto del domingo 4 de octubre a las 9:45 a. m.">
 <style>
-:root{--n:#071a33;--n2:#0b2d52;--c:#00b8ff;--b:#0f7cff;--bg:#f5f8fc;--card:#fff;--t:#132238;--m:#708199;--l:#dce6f1;--ok:#16a36a;--w:#f59e0b;--d:#e5484d}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--t)}button,input,select,textarea{font:inherit}.hidden{display:none!important}.app{min-height:100vh;display:grid;grid-template-columns:250px 1fr}aside{background:linear-gradient(180deg,var(--n),#061426);color:white;padding:20px 14px;position:sticky;top:0;height:100vh}.brand{display:flex;gap:10px;align-items:center;margin-bottom:22px}.logo{width:44px;height:44px;border:2px solid var(--c);border-radius:14px;display:grid;place-items:center;font-weight:900}.brand span{display:block;font-size:11px;letter-spacing:2px;color:#7fdfff}nav button{width:100%;border:0;background:transparent;color:#cbd9e8;text-align:left;padding:12px;border-radius:12px;margin:3px 0;cursor:pointer}nav button.active,nav button:hover{background:rgba(0,184,255,.15);color:#fff}main{padding:22px;max-width:1450px;width:100%;margin:auto}header{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:18px}h1{margin:0;font-size:27px}header p{margin:5px 0 0;color:var(--m)}.btn{border:0;border-radius:11px;padding:10px 14px;font-weight:700;cursor:pointer}.primary{background:linear-gradient(135deg,var(--b),var(--c));color:#fff}.ghost{background:#fff;border:1px solid var(--l)}.danger-btn{background:#fff1f2;color:#b4232d;border:1px solid #fecdd3}.grid{display:grid;gap:15px}.kpis{grid-template-columns:repeat(4,1fr);margin-bottom:16px}.card{background:#fff;border:1px solid var(--l);border-radius:18px;padding:17px;box-shadow:0 10px 30px rgba(4,35,66,.06)}.kpi small{color:var(--m)}.kpi strong{display:block;font-size:29px;margin-top:8px}.two{grid-template-columns:1.3fr .7fr}.section{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.section h2{margin:0;font-size:18px}.pipeline{display:flex;gap:8px;overflow:auto}.stage{min-width:160px;background:#f7fbff;border:1px solid var(--l);border-radius:13px;padding:12px}.stage strong{display:block;font-size:24px;margin:7px 0}.table-wrap{overflow:auto;border:1px solid var(--l);border-radius:13px}table{width:100%;border-collapse:collapse;min-width:900px}th,td{padding:11px;border-bottom:1px solid var(--l);font-size:13px;text-align:left}th{background:#f2f7fc}.badge{display:inline-flex;padding:6px 9px;border-radius:999px;background:#eef6ff;font-size:12px;font-weight:700}.ok{background:#eaf8f1;color:#08774b}.warn{background:#fff5df;color:#996000}.danger{background:#feecec;color:#b4232d}.whats{display:inline-block;text-decoration:none;background:#e9fbf2;color:#087a49;border:1px solid #bdebd5;padding:7px 10px;border-radius:10px;font-weight:700}.view{display:none}.view.active{display:block}.empty{padding:25px;text-align:center;color:var(--m)}.modal{position:fixed;inset:0;background:rgba(1,15,29,.58);display:none;align-items:center;justify-content:center;padding:18px;z-index:30}.modal.open{display:flex}.modal-box{width:min(760px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:20px;padding:20px}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.full{grid-column:1/-1}label{display:grid;gap:6px;font-size:12px;color:#52647a;font-weight:700}input,select,textarea{padding:11px;border:1px solid #cfdceb;border-radius:11px;width:100%}textarea{min-height:75px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}.toolbar input{max-width:320px}.toolbar select{max-width:220px}.bulkbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 12px;padding:12px;border:1px solid #c6eaff;background:#f3fbff;border-radius:13px}.bulkbar .btn:disabled{opacity:.5;cursor:not-allowed}.bulk-status{font-size:12px;color:#52647a;font-weight:700}.checkcell{width:42px;text-align:center}.checkcell input{width:18px;height:18px;cursor:pointer}.notice{padding:12px;background:#eef8ff;border:1px solid #c6eaff;border-radius:12px;color:#27577a;font-size:13px}.statusbar{font-size:12px;color:#d2e9ff;margin-top:16px;line-height:1.5}.login-page{min-height:100vh;display:grid;place-items:center;padding:20px;background:radial-gradient(circle at top right,#0f7cff33,transparent 35%),linear-gradient(135deg,#061426,#0b2d52)}.login-card{width:min(440px,100%);background:white;border-radius:22px;padding:28px;box-shadow:0 25px 70px #0005}.login-brand{display:flex;align-items:center;gap:12px;margin-bottom:22px}.login-card h1{font-size:24px}.login-card p{color:var(--m)}.login-card label{margin:12px 0}.login-error{min-height:20px;color:#b4232d;font-size:13px;margin-top:10px}.sync-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a36a;margin-right:6px}.sync-dot.off{background:#e5484d}.loader{opacity:.65;pointer-events:none}@media(max-width:950px){.app{grid-template-columns:1fr}aside{height:auto;position:static}nav{display:flex;overflow:auto}nav button{width:auto;white-space:nowrap}.kpis{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}main{padding:14px}}@media(max-width:600px){header{align-items:flex-start;flex-direction:column}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.kpis{grid-template-columns:1fr 1fr}}
-
-.chat-layout{display:grid;grid-template-columns:320px 1fr;gap:14px;min-height:620px}
-.chat-list{border:1px solid var(--l);border-radius:16px;background:#fff;overflow:hidden}
-.chat-list-head{padding:12px;border-bottom:1px solid var(--l);background:#f7fbff}
-.chat-list-head input{max-width:none}
-.chat-contacts{max-height:560px;overflow:auto}
-.chat-contact{width:100%;border:0;border-bottom:1px solid var(--l);background:#fff;padding:13px;text-align:left;cursor:pointer}
-.chat-contact:hover,.chat-contact.active{background:#eef8ff}
-.chat-contact b,.chat-contact small,.chat-contact span{display:block}
-.chat-contact small{color:var(--m);margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.chat-contact span{font-size:11px;color:var(--m);margin-top:4px}
-.chat-panel{border:1px solid var(--l);border-radius:16px;background:#edf3f7;display:flex;flex-direction:column;min-width:0}
-.chat-head{padding:14px 16px;background:#fff;border-bottom:1px solid var(--l);border-radius:16px 16px 0 0}
-.chat-head b,.chat-head small{display:block}.chat-head small{color:var(--m);margin-top:3px}
-.chat-messages{flex:1;min-height:430px;max-height:520px;overflow:auto;padding:18px;display:flex;flex-direction:column;gap:9px}
-.bubble{max-width:78%;padding:10px 12px;border-radius:14px;background:#fff;box-shadow:0 1px 2px #0001;white-space:pre-wrap;overflow-wrap:anywhere}
-.bubble.in{align-self:flex-start;border-top-left-radius:4px}
-.bubble.out{align-self:flex-end;background:#d9fdd3;border-top-right-radius:4px}
-.bubble small{display:block;color:#6c7b8d;font-size:10px;margin-top:5px;text-align:right}
-.chat-compose{padding:12px;background:#fff;border-top:1px solid var(--l);border-radius:0 0 16px 16px;display:flex;gap:9px}
-.chat-compose textarea{min-height:46px;max-height:120px;resize:vertical}
-.chat-compose button{align-self:flex-end}
-.chat-empty{padding:24px;color:var(--m);text-align:center}
-@media(max-width:850px){.chat-layout{grid-template-columns:1fr}.chat-contacts{max-height:260px}.chat-messages{min-height:360px}}
-
+:root{--navy:#092f5d;--navy2:#174f80;--gold:#c99a2e;--cream:#fffaf0;--ink:#17324b;--green:#24c45b}
+*{box-sizing:border-box}
+body{margin:0;background:#edf2f5;font-family:Arial,Helvetica,sans-serif;color:var(--ink)}
+.invite{max-width:720px;margin:auto;background:
+radial-gradient(circle at 15% 7%,rgba(237,199,104,.20),transparent 24%),
+radial-gradient(circle at 88% 18%,rgba(96,171,218,.16),transparent 26%),
+linear-gradient(180deg,#fffefb 0%,#fff 58%,#fff8ea 100%);min-height:100vh;overflow:hidden}
+.header{text-align:center;padding:28px 22px 0}
+.globe{width:102px;height:102px;object-fit:contain;display:block;margin:0 auto 8px}
+.church{font-size:13px;font-weight:900;letter-spacing:.07em;line-height:1.35;color:var(--navy);max-width:520px;margin:0 auto}
+.goldline{width:78px;height:3px;border-radius:3px;background:var(--gold);margin:15px auto 25px}
+.pre{font-family:Georgia,serif;font-size:18px;font-style:italic;color:#8a691c;margin-bottom:6px}
+h1{font-family:Georgia,serif;font-style:italic;font-weight:700;color:var(--navy);font-size:clamp(43px,9.5vw,70px);line-height:1.02;margin:0 auto 18px;max-width:650px}
+.welcome{font-size:clamp(18px,3.7vw,23px);line-height:1.45;max-width:590px;margin:0 auto 24px;color:#385064}
+.verse{max-width:610px;margin:0 auto 28px;padding:21px 20px;background:rgba(240,246,251,.88);border-radius:22px;box-shadow:0 8px 28px rgba(21,59,91,.07);font:italic 20px/1.5 Georgia,serif;color:var(--navy)}
+.verse span{display:block;font:700 12px Arial;margin-top:11px;letter-spacing:.2em;color:#8c6a1b}
+.body{padding:0 20px 30px}
+.event{max-width:610px;margin:auto;background:white;border:1px solid #eadcb9;border-radius:24px;padding:22px 20px;text-align:center;box-shadow:0 10px 30px rgba(25,57,82,.07)}
+.day{font-size:28px;font-weight:900;color:var(--navy)}
+.hour{display:inline-block;margin:9px 0 17px;padding:7px 18px;border-radius:999px;background:#fff3d6;color:#89620b;font-size:22px;font-weight:900}
+.place{font-size:18px;line-height:1.5}
+.share{max-width:580px;margin:25px auto 7px;text-align:center;font-size:19px;line-height:1.5}
+.highlight{font-family:Georgia,serif;font-style:italic;font-size:27px;line-height:1.35;color:#9b7419;text-align:center;margin:19px auto 26px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:610px;margin:auto}
+.btn{min-height:68px;border-radius:18px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:10px;padding:13px 16px;font-size:18px;font-weight:900;box-shadow:0 8px 18px rgba(18,55,82,.10)}
+.btn:active{transform:scale(.985)}
+.wa{background:var(--green);color:#063c21}
+.map{background:var(--navy2);color:white}
+.icon{font-size:26px}
+.contact{text-align:center;font-size:15px;color:#667783;margin:14px auto 2px}
+.footer{text-align:center;padding:28px 20px 31px;background:linear-gradient(135deg,#092f5d,#124d7b);color:white}
+.footer-title{font:italic 34px Georgia,serif;margin-bottom:8px}
+.footer-sub{font-size:13px;letter-spacing:.15em;color:#f2d789}
+@media(max-width:520px){
+.header{padding:22px 16px 0} .body{padding:0 16px 26px}
+.globe{width:92px;height:92px} .church{font-size:11px;letter-spacing:.04em}
+.actions{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
-<div id="loginPage" class="login-page">
-  <div class="login-card">
-    <div class="login-brand"><div class="logo">M</div><div><h1>MIRED<span style="color:#0f7cff">360</span> CRM</h1><small>Acceso seguro con Supabase</small></div></div>
-    <p>Ingresa con el correo y la contraseña del usuario creado en Supabase.</p>
-    <label>Correo electrónico<input id="loginEmail" type="email" autocomplete="username" placeholder="correo@ejemplo.com"></label>
-    <label>Contraseña<input id="loginPassword" type="password" autocomplete="current-password" placeholder="Tu contraseña"></label>
-    <button class="btn primary" style="width:100%" id="loginBtn">Ingresar</button>
-    <div id="loginError" class="login-error"></div>
-  </div>
-</div>
-
-<div id="crmApp" class="app hidden">
-<aside>
-  <div class="brand"><div class="logo">M</div><div><b>MIRED<span style="color:#00b8ff">360</span></b><span>SERVICIOS · CRM</span></div></div>
-  <nav><button class="active" data-view="dashboard">📊 Dashboard</button><button data-view="prospectos">👥 Prospectos</button><button data-view="conversaciones">💬 WhatsApp</button><button data-view="seguimientos">📅 Seguimientos</button><button data-view="ventas">💰 Ventas</button><button data-view="publicidad">📣 Publicidad</button><button data-view="config">⚙️ Configuración</button></nav>
-  <div class="statusbar"><span id="syncDot" class="sync-dot"></span><span id="syncText">Conectado a Supabase</span><br><span id="userLabel"></span></div>
-</aside>
-<main>
-<section class="view active" id="dashboard"><header><div><h1>Panel comercial</h1><p>Controle prospectos, seguimientos, ventas e instalaciones.</p></div><div><button class="btn ghost" id="exportBtn">Exportar CSV</button> <button class="btn primary" onclick="openLead()">+ Nuevo prospecto</button></div></header><div class="grid kpis"><div class="card kpi"><small>Prospectos</small><strong id="kPros">0</strong></div><div class="card kpi"><small>Seguimientos hoy</small><strong id="kFollow">0</strong></div><div class="card kpi"><small>Ventas</small><strong id="kSales">0</strong></div><div class="card kpi"><small>Instalados</small><strong id="kInstalled">0</strong></div></div><div class="card" style="margin-bottom:15px"><div class="section"><h2>Embudo comercial</h2></div><div class="pipeline" id="pipeline"></div></div><div class="grid two"><div class="card"><div class="section"><h2>Prospectos recientes</h2><button class="btn ghost" onclick="showView('prospectos')">Ver todos</button></div><div class="table-wrap"><table><thead><tr><th>Cliente</th><th>Ciudad</th><th>Origen</th><th>Estado</th><th>WhatsApp</th></tr></thead><tbody id="recentRows"></tbody></table></div></div><div class="card"><div class="section"><h2>Seguimientos próximos</h2></div><div id="followBox"></div></div></div></section>
-<section class="view" id="prospectos"><header><div><h1>Prospectos</h1><p>Base central de clientes potenciales.</p></div><button class="btn primary" onclick="openLead()">+ Nuevo prospecto</button></header><div class="card"><div class="toolbar"><input id="searchLead" placeholder="Buscar nombre, teléfono, ciudad..."><select id="filterStatus"><option value="">Todos los estados</option></select></div><div class="bulkbar"><button class="btn primary" id="bulkWhatsBtn" onclick="sendSelectedWhatsApp()" disabled>📣 Enviar WhatsApp (0)</button><button class="btn ghost" id="clearSelectionBtn" onclick="clearLeadSelection()" disabled>Limpiar selección</button><span class="bulk-status" id="bulkStatus">Seleccione los prospectos autorizados para recibir la plantilla aprobada.</span></div><div class="table-wrap"><table><thead><tr><th class="checkcell"><input type="checkbox" id="selectVisibleLeads" title="Seleccionar visibles"></th><th>Fecha</th><th>Cliente</th><th>Teléfono</th><th>Ciudad/Barrio</th><th>Origen</th><th>Producto</th><th>Estado</th><th>Seguimiento</th><th>WhatsApp</th><th></th></tr></thead><tbody id="leadRows"></tbody></table></div></div></section>
-
-<section class="view" id="conversaciones">
-<header>
-  <div>
-    <h1>WhatsApp</h1>
-    <p>Bandeja de conversaciones del número conectado a WhatsApp Cloud API.</p>
-  </div>
-  <button class="btn ghost" onclick="loadMessages(true)">↻ Actualizar</button>
+<main class="invite">
+<header class="header">
+<img class="globe" src="data:image/png;base64,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" alt="Símbolo de la Iglesia">
+<div class="church">IGLESIA PENTECOSTÉS UNIDA INTERNACIONAL DE COLOMBIA</div>
+<div class="goldline"></div>
+<div class="pre">Una invitación especialmente para ti</div>
+<h1>Querido amigo,<br>te esperamos</h1>
+<p class="welcome">Nos alegra mucho tenerte con nosotros y queremos volver a compartir contigo un tiempo especial en la presencia de Dios.</p>
+<div class="verse">“Con amor eterno te he amado; por tanto, te prolongué mi misericordia.”<span>JEREMÍAS 31:3</span></div>
 </header>
-<div class="notice" style="margin-bottom:12px">
-  <b>Atención:</b> puedes responder con texto libre dentro de la ventana de atención de 24 horas después del último mensaje del cliente. Fuera de esa ventana, inicia la conversación con una plantilla aprobada.
+
+<section class="body">
+<div class="event">
+<div class="day">Domingo 4 de octubre</div>
+<div class="hour">09:45 a. m.</div>
+<div class="place"><strong>Iglesia Pentecostés Unida Internacional</strong><br>Carrera 6 # 12A-48, piso 2<br>Barrio Santa Matilde</div>
 </div>
-<div class="chat-layout">
-  <div class="chat-list">
-    <div class="chat-list-head">
-      <input id="chatSearch" placeholder="Buscar nombre o teléfono...">
-    </div>
-    <div class="chat-contacts" id="chatContacts">
-      <div class="chat-empty">Cargando conversaciones...</div>
-    </div>
-  </div>
 
-  <div class="chat-panel">
-    <div class="chat-head" id="chatHead">
-      <b>Selecciona una conversación</b>
-      <small>Los mensajes entrantes aparecerán aquí.</small>
-    </div>
+<p class="share">Además, tendremos un <strong>compartir especial con todos nuestros amigos.</strong></p>
+<div class="highlight">Será una alegría contar con tu presencia. ♥</div>
 
-    <div class="chat-messages" id="chatMessages">
-      <div class="chat-empty">Selecciona un contacto para ver el historial.</div>
-    </div>
-
-    <div class="chat-compose">
-      <textarea id="replyText" placeholder="Escribe tu respuesta..." disabled></textarea>
-      <button class="btn primary" id="replyBtn" onclick="sendChatReply()" disabled>Enviar</button>
-    </div>
-  </div>
+<div class="actions">
+<a class="btn wa" href="https://wa.me/573207619974?text=Hola%2C%20recib%C3%AD%20la%20invitaci%C3%B3n%20para%20el%20domingo%204%20de%20octubre%20a%20las%209%3A45%20a.%20m.%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener"><span class="icon">💬</span> Escríbenos por WhatsApp</a>
+<a class="btn map" href="https://www.google.com/maps/search/?api=1&query=Carrera%206%20%23%2012A-48%2C%20piso%202%2C%20Barrio%20Santa%20Matilde" target="_blank" rel="noopener"><span class="icon">📍</span> Cómo llegar</a>
 </div>
+<div class="contact">Más información: <strong>320 761 9974</strong></div>
 </section>
 
-<section class="view" id="seguimientos"><header><div><h1>Seguimientos</h1><p>Lo que debe atender hoy y después.</p></div></header><div class="card"><div class="table-wrap"><table><thead><tr><th>Fecha</th><th>Cliente</th><th>Teléfono</th><th>Estado</th><th>Nota</th><th>WhatsApp</th></tr></thead><tbody id="followRows"></tbody></table></div></div></section>
-<section class="view" id="ventas"><header><div><h1>Ventas</h1><p>Negocios cerrados e instalaciones.</p></div></header><div class="card"><div class="table-wrap"><table><thead><tr><th>Cliente</th><th>Plan</th><th>Valor</th><th>Estado</th><th>Instalación</th><th>Comisión</th></tr></thead><tbody id="salesRows"></tbody></table></div></div></section>
-<section class="view" id="publicidad"><header><div><h1>Publicidad</h1><p>Registre inversión y mida resultados.</p></div></header><div class="grid two"><div class="card"><h2>Resumen</h2><p>Inversión: <b id="adSpend">$0</b></p><p>Ventas atribuidas: <b id="adSales">0</b></p></div><div class="card"><h2>Registrar campaña</h2><div class="form-grid"><label>Nombre<input id="adName"></label><label>Canal<select id="adChannel"><option>Facebook</option><option>Instagram</option><option>Google</option><option>Orgánico</option><option>Otro</option></select></label><label>Inversión<input id="adAmount" type="number"></label><label>Fecha<input id="adDate" type="date"></label><div class="full"><button class="btn primary" onclick="addAd()">Guardar campaña</button></div></div></div></div><div class="card" style="margin-top:15px"><div class="table-wrap"><table><thead><tr><th>Fecha</th><th>Campaña</th><th>Canal</th><th>Inversión</th></tr></thead><tbody id="adRows"></tbody></table></div></div></section>
-<section class="view" id="config"><header><div><h1>Configuración</h1><p>Cuenta, sincronización y respaldo.</p></div></header><div class="grid two"><div class="card"><label>Nombre comercial<input id="businessName" value="MIRED360SERVICIOS"></label><br><label>WhatsApp principal<input id="businessPhone" value="573133938312"></label><br><button class="btn primary" onclick="saveSettings()">Guardar</button><br><br><button class="btn ghost" onclick="migrateLocalLeads()">Migrar prospectos locales a Supabase</button><br><br><button class="btn danger-btn" onclick="logoutCRM()">Cerrar sesión</button></div><div class="card"><div class="notice"><b>Prospectos:</b> se guardan en Supabase. La sección Publicidad y la configuración general siguen guardándose localmente en este navegador por ahora.</div></div></div></section>
+<footer class="footer">
+<div class="footer-title">¡Te esperamos!</div>
+<div class="footer-sub">UN LUGAR PARA TI</div>
+</footer>
 </main>
-</div>
-
-<div class="modal" id="leadModal"><div class="modal-box"><div class="section"><h2 id="modalTitle">Nuevo prospecto</h2><button class="btn ghost" onclick="closeLead()">✕</button></div><div class="form-grid"><input type="hidden" id="leadId"><label>Nombre<input id="name"></label><label>Teléfono<input id="phone"></label><label>Ciudad<input id="city"></label><label>Barrio<input id="barrio"></label><label class="full">Dirección<input id="address"></label><label>Origen<select id="origin"><option>Facebook Ads</option><option>Instagram Ads</option><option>WhatsApp</option><option>Orgánico</option><option>Referido</option><option>Google Ads</option><option>Otro</option></select></label><label>Campaña<input id="campaign"></label><label>Producto<select id="product"><option>Internet Hogar</option><option>Internet Negocios</option><option>Datáfono</option><option>Recargas</option><option>Pago de facturas</option><option>Streaming</option><option>Herramientas digitales</option><option>Otro</option></select></label><label>Operador<input id="operator"></label><label>Plan<input id="plan"></label><label>Valor mensual<input id="value" type="number"></label><label>Estado<select id="status"></select></label><label>Próximo seguimiento<input id="nextFollow" type="date"></label><label>Fecha instalación<input id="installDate" type="date"></label><label>Comisión<input id="commission" type="number"></label><label>Estado comisión<select id="estadoComision"><option value="pendiente">Pendiente</option><option value="pagada">Pagada</option></select></label><label class="full">Notas<textarea id="notes"></textarea></label><div class="full"><button class="btn ghost" onclick="closeLead()">Cancelar</button> <button class="btn primary" id="saveLeadBtn" onclick="saveLead()">Guardar prospecto</button></div></div></div></div>
-
-<script>
-const SUPABASE_URL='https://lpiusomsuswdcraoozdn.supabase.co';
-const SUPABASE_KEY='sb_publishable_ZFjdUsgyfSxOqm4L1SrJJg_Z2f0lL0r';
-const supabaseClient=supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
-const WHATSAPP_SEND_URL=SUPABASE_URL+'/functions/v1/whatsapp-send';
-const selectedLeadIds=new Set();
-
-const STAGES=['Nuevo contacto','Validar cobertura','Cobertura positiva','Oferta enviada','Seguimiento','Venta','Pendiente instalación','Instalado','No interesado'];
-const $=id=>document.getElementById(id);
-const today=()=>new Date().toISOString().slice(0,10);
-const money=n=>new Intl.NumberFormat('es-CO',{style:'currency',currency:'COP',maximumFractionDigits:0}).format(Number(n||0));
-let leads=[];
-let ads=JSON.parse(localStorage.getItem('mired360_ads_v1')||'[]');
-let currentUser=null;
-let waMessages=[];
-let activeChatPhone='';
-let messageSubscription=null;
-
-function dbToLead(r){
-  return {
-    id:r.id,
-    created:(r.fecha_ingreso||r.creado_en||'').slice(0,10),
-    name:r.nombre||'', phone:r.telefono||'', city:r.ciudad||'', barrio:r.barrio||'', address:r.direccion||'',
-    origin:r.origen||'Facebook Ads', campaign:r.campana||'', product:r.producto||'Internet Hogar', operator:r.operador||'',
-    plan:r.plan||'', value:Number(r.valor_mensual||0), status:r.estado||'Nuevo contacto',
-    nextFollow:(r.proximo_seguimiento||'').slice(0,10), installDate:(r.fecha_instalacion||'').slice(0,10),
-    commission:Number(r.comision||0), notes:r.notas||''
-  };
-}
-
-function leadToDb(o){
-  return {
-    user_id:currentUser.id,
-    nombre:o.name,
-    telefono:o.phone,
-    ciudad:o.city||null,
-    barrio:o.barrio||null,
-    direccion:o.address||null,
-    origen:o.origin||null,
-    campana:o.campaign||null,
-    producto:o.product||null,
-    operador:o.operator||null,
-    plan:o.plan||null,
-    valor_mensual:o.value||0,
-    estado:o.status||'Nuevo contacto',
-    proximo_seguimiento:o.nextFollow||null,
-    fecha_instalacion:o.installDate||null,
-    comision:o.commission||0,
-estado_comision:o.estadoComision||'pendiente',
-
-    notas:o.notes||null,
-    actualizado_en:new Date().toISOString()
-  };
-}
-
-async function loginCRM(){
-  const email=$('loginEmail').value.trim();
-  const password=$('loginPassword').value;
-  $('loginError').textContent='';
-  if(!email||!password){$('loginError').textContent='Escribe correo y contraseña.';return;}
-  $('loginBtn').disabled=true;$('loginBtn').textContent='Ingresando...';
-  const {data,error}=await supabaseClient.auth.signInWithPassword({email,password});
-  $('loginBtn').disabled=false;$('loginBtn').textContent='Ingresar';
-  if(error){$('loginError').textContent='No fue posible ingresar: '+error.message;return;}
-  await enterCRM(data.user);
-}
-
-async function logoutCRM(){
-  if(messageSubscription){await supabaseClient.removeChannel(messageSubscription);messageSubscription=null;}
-  await supabaseClient.auth.signOut();
-  currentUser=null;leads=[];waMessages=[];activeChatPhone='';
-  $('crmApp').classList.add('hidden');
-  $('loginPage').classList.remove('hidden');
-}
-
-async function enterCRM(user){
-  currentUser=user;
-  $('userLabel').textContent=user.email||'';
-  $('loginPage').classList.add('hidden');
-  $('crmApp').classList.remove('hidden');
-  await loadLeads();
-  await loadMessages(false);
-  startMessageRealtime();
-}
-
-async function loadLeads(){
-  setSync('Cargando prospectos...',true);
-  const {data,error}=await supabaseClient.from('prospectos').select('*').order('creado_en',{ascending:false});
-  if(error){setSync('Error de Supabase',false);alert('No se pudieron cargar los prospectos. '+error.message);leads=[];render();return;}
-  leads=(data||[]).map(dbToLead);
-  setSync('Conectado a Supabase',true);
-  render();
-}
-
-function setSync(text,ok){$('syncText').textContent=text;$('syncDot').classList.toggle('off',!ok);}
-function wa(p,n){p=(p||'').replace(/\D/g,'');if(p.length===10)p='57'+p;return'https://wa.me/'+p+'?text='+encodeURIComponent('Hola '+(n||'')+', te escribimos de MIRED360SERVICIOS para continuar con tu solicitud.');}
-function badge(s){let c=s==='Instalado'?'ok':s==='No interesado'?'danger':(s==='Seguimiento'||s==='Pendiente instalación'?'warn':'');return`<span class="badge ${c}">${s}</span>`;}
-function showView(id){
-  document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));
-  document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===id));
-  if(id==='conversaciones')loadMessages(false);
-}
-document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>showView(b.dataset.view));
-
-function openLead(id){
-  const x=id?leads.find(l=>l.id===id):null;
-  $('modalTitle').textContent=x?'Editar prospecto':'Nuevo prospecto';
-  $('leadId').value=x?.id||'';
-  ['name','phone','city','barrio','address','campaign','operator','plan','value','nextFollow','installDate','commission','notes'].forEach(k=>$(k).value=x?.[k]||'');
-  $('origin').value=x?.origin||'Facebook Ads';
-  $('product').value=x?.product||'Internet Hogar';
-  $('status').value=x?.status||'Nuevo contacto';
-  $('leadModal').classList.add('open');
-}
-function closeLead(){$('leadModal').classList.remove('open');}
-
-async function saveLead(){
-  if(!currentUser){alert('La sesión no está activa. Vuelve a ingresar.');return;}
-  const id=$('leadId').value;
-  const o={
-    name:$('name').value.trim(),phone:$('phone').value.trim(),city:$('city').value.trim(),barrio:$('barrio').value.trim(),address:$('address').value.trim(),
-    origin:$('origin').value,campaign:$('campaign').value.trim(),product:$('product').value,operator:$('operator').value.trim(),plan:$('plan').value.trim(),
-    value:Number($('value').value||0),status:$('status').value,nextFollow:$('nextFollow').value,installDate:$('installDate').value,
-    commission:Number($('commission').value||0),notes:$('notes').value.trim()
-  };
-  if(!o.name||!o.phone){alert('Nombre y teléfono son obligatorios');return;}
-  const btn=$('saveLeadBtn');btn.disabled=true;btn.textContent='Guardando...';setSync('Sincronizando...',true);
-  let result;
-  if(id){result=await supabaseClient.from('prospectos').update(leadToDb(o)).eq('id',id).select().single();}
-  else{result=await supabaseClient.from('prospectos').insert(leadToDb(o)).select().single();}
-  btn.disabled=false;btn.textContent='Guardar prospecto';
-  if(result.error){setSync('Error de Supabase',false);alert('No se pudo guardar. '+result.error.message);return;}
-  closeLead();await loadLeads();
-}
-
-async function delLead(id){
-  if(!confirm('¿Eliminar este prospecto?'))return;
-  const {error}=await supabaseClient.from('prospectos').delete().eq('id',id);
-  if(error){alert('No se pudo eliminar. '+error.message);return;}
-  await loadLeads();
-}
-
-function render(){
-  $('kPros').textContent=leads.length;
-  $('kFollow').textContent=leads.filter(l=>l.nextFollow===today()&&!['Instalado','No interesado'].includes(l.status)).length;
-  $('kSales').textContent=leads.filter(l=>['Venta','Pendiente instalación','Instalado'].includes(l.status)).length;
-  $('kInstalled').textContent=leads.filter(l=>l.status==='Instalado').length;
-  $('pipeline').innerHTML=STAGES.filter(s=>s!=='No interesado').map(s=>`<div class="stage"><b>${s}</b><strong>${leads.filter(l=>l.status===s).length}</strong><span>prospectos</span></div>`).join('');
-  $('recentRows').innerHTML=leads.slice(0,6).map(l=>`<tr><td><b>${l.name}</b><br>${l.phone}</td><td>${l.city||'-'}</td><td>${l.origin}</td><td>${badge(l.status)}</td><td><a class="whats" target="_blank" href="${wa(l.phone,l.name)}">WhatsApp</a></td></tr>`).join('')||'<tr><td colspan="5" class="empty">Aún no hay prospectos.</td></tr>';
-  $('followBox')&&($('followBox').innerHTML=leads.filter(l=>l.nextFollow&&!['Instalado','No interesado'].includes(l.status)).sort((a,b)=>a.nextFollow.localeCompare(b.nextFollow)).map(l=>`<p>${l.nextFollow} · ${l.name} <small>${l.status}</small></p>`).join('')||'<div class="empty">No hay seguimientos</div>');
-  renderLeadTable();
-  $('followRows').innerHTML=leads.filter(l=>l.nextFollow&&!['Instalado','No interesado'].includes(l.status)).sort((a,b)=>a.nextFollow.localeCompare(b.nextFollow)).map(l=>`<tr><td>${l.nextFollow}</td><td>${l.name}</td><td>${l.phone}</td><td>${badge(l.status)}</td><td>${l.notes||'-'}</td><td><a class="whats" href="${wa(l.phone,l.name)}" target="_blank">Abrir</a></td></tr>`).join('')||'<tr><td colspan="6" class="empty">No hay seguimientos.</td></tr>';
-  $('salesRows').innerHTML=leads.filter(l=>['Venta','Pendiente instalación','Instalado'].includes(l.status)).map(l=>`<tr><td>${l.name}</td><td>${l.plan||'-'}</td><td>${money(l.value)}</td><td>${badge(l.status)}</td><td>${l.installDate||'-'}</td><td>${money(l.commission)}</td></tr>`).join('')||'<tr><td colspan="6" class="empty">Aún no hay ventas.</td></tr>';
-  renderAds();
-}
-
-function filteredLeads(){
-  const q=($('searchLead').value||'').toLowerCase(),fs=$('filterStatus').value;
-  return leads.filter(l=>(!fs||l.status===fs)&&[l.name,l.phone,l.city,l.barrio,l.origin,l.product].join(' ').toLowerCase().includes(q));
-}
-
-function updateBulkControls(){
-  const count=selectedLeadIds.size;
-  const btn=$('bulkWhatsBtn'),clear=$('clearSelectionBtn');
-  if(btn){btn.disabled=count===0;btn.textContent=`📣 Enviar WhatsApp (${count})`;}
-  if(clear)clear.disabled=count===0;
-  const visible=filteredLeads().filter(l=>l.phone);
-  const master=$('selectVisibleLeads');
-  if(master){
-    const marked=visible.filter(l=>selectedLeadIds.has(String(l.id))).length;
-    master.checked=visible.length>0&&marked===visible.length;
-    master.indeterminate=marked>0&&marked<visible.length;
-  }
-}
-
-
-function escapeHtml(v){
-  return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
-}
-function formatMsgTime(v){
-  if(!v)return '';
-  const d=new Date(v);
-  return isNaN(d)?String(v):d.toLocaleString('es-CO',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'});
-}
-function leadForPhone(phone){
-  const p=normalizeWhatsNumber(phone);
-  return leads.find(l=>normalizeWhatsNumber(l.phone)===p);
-}
-async function loadMessages(showAlert=false){
-  if(!currentUser)return;
-  const {data,error}=await supabaseClient
-    .from('whatsapp_mensajes')
-    .select('*')
-    .order('creado_en',{ascending:true})
-    .limit(3000);
-
-  if(error){
-    if(showAlert)alert('No se pudieron cargar las conversaciones. '+error.message);
-    const box=$('chatContacts');
-    if(box)box.innerHTML='<div class="chat-empty">No se pudieron cargar los mensajes.</div>';
-    return;
-  }
-  waMessages=data||[];
-  renderChatContacts();
-  if(activeChatPhone)renderActiveChat();
-}
-function groupedChats(){
-  const map=new Map();
-  for(const m of waMessages){
-    const phone=normalizeWhatsNumber(m.telefono);
-    if(!phone)continue;
-    if(!map.has(phone))map.set(phone,[]);
-    map.get(phone).push(m);
-  }
-  return [...map.entries()].map(([phone,msgs])=>{
-    msgs.sort((a,b)=>new Date(a.creado_en)-new Date(b.creado_en));
-    const last=msgs[msgs.length-1];
-    const lead=leadForPhone(phone);
-    const name=lead?.name||last.nombre||phone;
-    return {phone,name,msgs,last};
-  }).sort((a,b)=>new Date(b.last.creado_en)-new Date(a.last.creado_en));
-}
-function renderChatContacts(){
-  const box=$('chatContacts'); if(!box)return;
-  const q=($('chatSearch')?.value||'').toLowerCase();
-  const groups=groupedChats().filter(g=>(g.name+' '+g.phone).toLowerCase().includes(q));
-  box.innerHTML=groups.map(g=>{
-    const active=g.phone===activeChatPhone?' active':'';
-    const preview=g.last.texto||('['+(g.last.tipo||'mensaje')+']');
-    return `<button class="chat-contact${active}" onclick="openChat('${g.phone}')">
-      <b>${escapeHtml(g.name)}</b>
-      <small>${escapeHtml(preview)}</small>
-      <span>${escapeHtml(g.phone)} · ${formatMsgTime(g.last.creado_en)}</span>
-    </button>`;
-  }).join('')||'<div class="chat-empty">No hay conversaciones todavía.</div>';
-}
-function openChat(phone){
-  activeChatPhone=normalizeWhatsNumber(phone);
-  renderChatContacts();
-  renderActiveChat();
-}
-function renderActiveChat(){
-  const panel=$('chatMessages'),head=$('chatHead'),input=$('replyText'),btn=$('replyBtn');
-  if(!panel||!head)return;
-  const group=groupedChats().find(g=>g.phone===activeChatPhone);
-  if(!group){
-    head.innerHTML='<b>Selecciona una conversación</b><small>Los mensajes entrantes aparecerán aquí.</small>';
-    panel.innerHTML='<div class="chat-empty">Sin mensajes.</div>';
-    input.disabled=true;btn.disabled=true;
-    return;
-  }
-  head.innerHTML=`<b>${escapeHtml(group.name)}</b><small>${escapeHtml(group.phone)}</small>`;
-  panel.innerHTML=group.msgs.map(m=>{
-    const dir=m.direccion==='saliente'?'out':'in';
-    const text=m.texto||('['+(m.tipo||'mensaje')+']');
-    const st=m.estado&&m.direccion==='saliente'?' · '+m.estado:'';
-    return `<div class="bubble ${dir}">${escapeHtml(text)}<small>${formatMsgTime(m.creado_en)}${escapeHtml(st)}</small></div>`;
-  }).join('');
-  input.disabled=false;btn.disabled=false;
-  setTimeout(()=>panel.scrollTop=panel.scrollHeight,0);
-}
-async function sendChatReply(){
-  const text=$('replyText').value.trim();
-  if(!activeChatPhone||!text)return;
-  const btn=$('replyBtn');
-  btn.disabled=true;
-  btn.textContent='Enviando...';
-
-  const {data:{session}}=await supabaseClient.auth.getSession();
-  const authToken=session?.access_token||SUPABASE_KEY;
-
-  try{
-    const response=await fetch(WHATSAPP_SEND_URL,{
-      method:'POST',
-      headers:{
-        'Content-Type':'application/json',
-        'Authorization':'Bearer '+authToken,
-        'apikey':SUPABASE_KEY
-      },
-      body:JSON.stringify({to:activeChatPhone,text})
-    });
-    const data=await response.json().catch(()=>({}));
-    if(!response.ok||!data?.messages?.length){
-      throw new Error(data?.error?.message||data?.error||'No se pudo enviar');
-    }
-    $('replyText').value='';
-    await loadMessages(false);
-  }catch(e){
-    alert('No se pudo enviar la respuesta. '+String(e.message||e));
-  }finally{
-    btn.disabled=false;
-    btn.textContent='Enviar';
-  }
-}
-function startMessageRealtime(){
-  if(messageSubscription||!currentUser)return;
-  messageSubscription=supabaseClient
-    .channel('mired360-whatsapp-mensajes')
-    .on('postgres_changes',{event:'*',schema:'public',table:'whatsapp_mensajes'},()=>loadMessages(false))
-    .subscribe();
-}
-
-function toggleLeadSelection(id,checked){
-  id=String(id);
-  if(checked)selectedLeadIds.add(id);else selectedLeadIds.delete(id);
-  updateBulkControls();
-}
-
-function toggleVisibleLeads(checked){
-  filteredLeads().forEach(l=>{if(!l.phone)return;const id=String(l.id);if(checked)selectedLeadIds.add(id);else selectedLeadIds.delete(id);});
-  renderLeadTable();
-}
-
-function clearLeadSelection(){
-  selectedLeadIds.clear();
-  renderLeadTable();
-  $('bulkStatus').textContent='Selección limpiada.';
-}
-
-function normalizeWhatsNumber(phone){
-  let p=String(phone||'').replace(/\D/g,'');
-  if(p.length===10)p='57'+p;
-  return p;
-}
-
-async function sendSelectedWhatsApp(){
-  const selected=leads.filter(l=>selectedLeadIds.has(String(l.id))&&l.phone);
-  if(!selected.length)return alert('Seleccione al menos un prospecto.');
-  if(!confirm(`Se enviará la plantilla aprobada mired360_validar_cobertura a ${selected.length} contacto(s). Continúe solo si estos contactos autorizaron comunicaciones por WhatsApp. ¿Enviar ahora?`))return;
-
-  const btn=$('bulkWhatsBtn');
-  btn.disabled=true;
-  let ok=0,fail=0;
-  const failures=[];
-  const {data:{session}}=await supabaseClient.auth.getSession();
-  const authToken=session?.access_token||SUPABASE_KEY;
-
-  for(let i=0;i<selected.length;i++){
-    const lead=selected[i];
-    $('bulkStatus').textContent=`Enviando ${i+1} de ${selected.length}: ${lead.name}...`;
-    try{
-      const response=await fetch(WHATSAPP_SEND_URL,{
-        method:'POST',
-        headers:{
-          'Content-Type':'application/json',
-          'Authorization':'Bearer '+authToken,
-          'apikey':SUPABASE_KEY
-        },
-        body:JSON.stringify({to:normalizeWhatsNumber(lead.phone)})
-      });
-      const data=await response.json().catch(()=>({}));
-      if(response.ok&&data?.messages?.length){ok++;}
-      else{fail++;failures.push(`${lead.name}: ${data?.error?.message||data?.error||'No enviado'}`);}
-    }catch(e){fail++;failures.push(`${lead.name}: ${String(e)}`);}
-    if(i<selected.length-1)await new Promise(r=>setTimeout(r,350));
-  }
-
-  $('bulkStatus').textContent=`Campaña terminada · Enviados: ${ok} · Fallidos: ${fail}`;
-  if(failures.length)console.warn('WhatsApp no enviados',failures);
-  alert(`Envío terminado.\n\nEnviados: ${ok}\nFallidos: ${fail}${failures.length?'\n\nRevise la consola para el detalle de fallidos.':''}`);
-  selectedLeadIds.clear();
-  renderLeadTable();
-}
-
-function renderLeadTable(){
-  const a=filteredLeads();
-  $('leadRows').innerHTML=a.map(l=>`<tr><td class="checkcell"><input type="checkbox" ${selectedLeadIds.has(String(l.id))?'checked':''} onchange="toggleLeadSelection('${l.id}',this.checked)" aria-label="Seleccionar ${String(l.name||'prospecto').replaceAll('"','&quot;')}"></td><td>${l.created||'-'}</td><td><b>${l.name}</b></td><td>${l.phone}</td><td>${[l.city,l.barrio].filter(Boolean).join(' / ')||'-'}</td><td>${l.origin}</td><td>${l.product}</td><td>${badge(l.status)}</td><td>${l.nextFollow||'-'}</td><td><a class="whats" target="_blank" href="${wa(l.phone,l.name)}">WhatsApp</a></td><td><button class="btn ghost" onclick="openLead('${l.id}')">Editar</button> <button class="btn ghost" onclick="delLead('${l.id}')">✕</button></td></tr>`).join('')||'<tr><td colspan="11" class="empty">Sin resultados.</td></tr>';
-  updateBulkControls();
-}
-
-
-$('searchLead').oninput=renderLeadTable;
-$('filterStatus').onchange=renderLeadTable;
-$('chatSearch').oninput=renderChatContacts;
-$('replyText').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendChatReply();}});
-$('selectVisibleLeads').onchange=e=>toggleVisibleLeads(e.target.checked);
-function addAd(){if(!$('adName').value.trim()||!$('adAmount').value)return alert('Ingrese nombre e inversión');ads.unshift({id:Date.now(),name:$('adName').value.trim(),channel:$('adChannel').value,amount:Number($('adAmount').value),date:$('adDate').value||today()});localStorage.setItem('mired360_ads_v1',JSON.stringify(ads));$('adName').value='';$('adAmount').value='';renderAds();}
-function renderAds(){$('adRows').innerHTML=ads.map(a=>`<tr><td>${a.date}</td><td>${a.name}</td><td>${a.channel}</td><td>${money(a.amount)}</td></tr>`).join('')||'<tr><td colspan="4" class="empty">No hay campañas.</td></tr>';$('adSpend').textContent=money(ads.reduce((s,a)=>s+a.amount,0));$('adSales').textContent=leads.filter(l=>['Venta','Pendiente instalación','Instalado'].includes(l.status)&&['Facebook Ads','Instagram Ads','Google Ads'].includes(l.origin)).length;}
-function saveSettings(){let phone=normalizeWhatsNumber($('businessPhone').value);$('businessPhone').value=phone;localStorage.setItem('mired360_settings_v1',JSON.stringify({businessName:$('businessName').value,businessPhone:phone}));alert('Configuración guardada');}
-function exportCSV(){let cols=['created','name','phone','city','barrio','address','origin','campaign','product','operator','plan','value','status','nextFollow','installDate','commission','notes'],esc=v=>'"'+String(v??'').replaceAll('"','""')+'"',csv=[cols.join(','),...leads.map(l=>cols.map(c=>esc(l[c])).join(','))].join('\n'),blob=new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='CRM_MIRED360_'+today()+'.csv';a.click();}
-
-async function migrateLocalLeads(){
-  const local=JSON.parse(localStorage.getItem('mired360_crm_v1')||'[]');
-  if(!local.length){alert('No encontré prospectos locales para migrar.');return;}
-  if(!confirm(`Se encontraron ${local.length} prospectos locales. ¿Migrarlos a Supabase evitando coincidencias por nombre y teléfono?`))return;
-  let inserted=0,skipped=0;
-  for(const l of local){
-    if(leads.some(x=>x.phone===l.phone&&x.name.toLowerCase()===String(l.name||'').toLowerCase())){skipped++;continue;}
-    const {error}=await supabaseClient.from('prospectos').insert(leadToDb(l));
-    if(error){alert('La migración se detuvo: '+error.message);break;}
-    inserted++;
-  }
-  await loadLeads();
-  alert(`Migración terminada. Nuevos: ${inserted}. Omitidos por posible duplicado: ${skipped}.`);
-}
-
-$('loginBtn').onclick=loginCRM;
-$('loginPassword').addEventListener('keydown',e=>{if(e.key==='Enter')loginCRM();});
-$('exportBtn').onclick=exportCSV;
-$('status').innerHTML=STAGES.map(s=>`<option>${s}</option>`).join('');
-$('filterStatus').innerHTML+=STAGES.map(s=>`<option>${s}</option>`).join('');
-$('adDate').value=today();
-const settings=JSON.parse(localStorage.getItem('mired360_settings_v1')||'{}');
-if(settings.businessName)$('businessName').value=settings.businessName;
-if(settings.businessPhone)$('businessPhone').value=settings.businessPhone;
-renderAds();
-
-(async()=>{
-  const {data:{session}}=await supabaseClient.auth.getSession();
-  if(session?.user)await enterCRM(session.user);
-})();
-</script>
 </body>
 </html>
